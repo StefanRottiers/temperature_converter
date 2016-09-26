@@ -32,6 +32,19 @@ class TemperatureConverter
     @temp=File.read("./data/temp.txt").to_s + " °C"
   end
 
+  def from_url_temp_fahrenheit
+    @temp=(((open('http://labict.be/software-engineering/temperature/api/temperature/fake') {|a| a.read }).to_f*1.8)+32).to_s + " °F"
+  end
+
+  def from_url_temp_kelvin
+    @temp=((open('http://labict.be/software-engineering/temperature/api/temperature/fake') {|a| a.read }).to_f+273.15).to_s + " °K"
+  end
+
+  def from_url_temp_celcius
+    @temp=(open('http://labict.be/software-engineering/temperature/api/temperature/fake') {|a| a.read }) + " °C"
+  end
+
+
 
 
 
