@@ -1,3 +1,7 @@
+require 'net/http'
+require 'uri'
+
+
 class TemperatureConverter
 
   def initialize temp
@@ -20,6 +24,15 @@ class TemperatureConverter
   def from_file_temp
     @temp=File.read("./data/temp.txt").to_s + " °C"
   end
+
+  def open(url)
+    Net::HTTP.get(URI.parse(url))
+  end
+
+  # def from_url_temp
+  #   @temp = open(http://labict.be/software-engineering/temperature/api/temperature/fake).to_f
+  # end
+
 
 
 end
