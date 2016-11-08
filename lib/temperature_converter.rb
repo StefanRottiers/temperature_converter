@@ -45,7 +45,4 @@ class TemperatureConverter
   end
 
 
-
-
-
 end
