@@ -14,6 +14,9 @@ puts temperature_converter.convert_to_fahrenheit
 puts temperature_converter.convert_to_kelvin
 puts temperature_converter.convert_to_celcius + "\r\n\n"
 puts "{celsius: " +temperature_converter.convert_to_celcius + ", fahrenheit: " +temperature_converter.convert_to_fahrenheit + ", kelvin: " + temperature_converter.convert_to_kelvin + "}\r\n\n"
+puts "<div>Celcius" + temperature_converter.convert_to_celcius + " </div> "
+puts "<div>Celcius" + temperature_converter.convert_to_fahrenheit + " </div> "
+puts "<div>Celcius" + temperature_converter.convert_to_kelvin + " </div> "
 puts "Values from txt file"
 puts temperature_converter.from_file_temp_fahrenheit
 puts temperature_converter.from_file_temp_kelvin
@@ -31,6 +34,7 @@ client = MQTT::Client.connect(
   :password =>'c8iuTSccnypK1eoFzEb/OoqB2FVAiFg/aEaYesnNf4w=',
 )
 
+#Get values from server
 client.get('70B3D57ED00012B2/devices/00000000AE6C63E4/up') do |topic,message|
 puts a  = JSON.parse(message)['fields']['temperature']
 #puts topic
