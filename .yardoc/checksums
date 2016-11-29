@@ -1,0 +1,6 @@
+lib/Printer.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+lib/gemtest.rb cf6f2aa29de0a2fd360177beab346dda65a5e3a8
+lib/Converter.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+lib/Reader_url.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+lib/Reader_server.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
+lib/temperature_converter.rb 1ec2ee3ec8afcece848a90a5fc5f5f10ab8689b5

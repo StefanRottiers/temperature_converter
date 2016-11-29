@@ -1,4 +1,4 @@
-require './lib/temperature_converter.rb'
+require 'temperature_converter.rb'
 require "open-uri"
 require 'rubygems'
 require 'mqtt'
