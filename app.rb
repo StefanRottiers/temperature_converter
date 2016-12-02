@@ -47,5 +47,7 @@ client = MQTT::Client.connect(
 #Get values from server
 client.get('70B3D57ED00012B2/devices/00000000AE6C63E4/up') do |topic,message|
 puts a  = JSON.parse(message)['fields']['temperature']
+client.disconnect()
+
 #puts topic
 end
